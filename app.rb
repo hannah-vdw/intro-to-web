@@ -13,11 +13,16 @@ get '/thatbread' do
   "payday tomorrow"
 end
 
-get '/just4lols' do
-  @dev_state = ["linkedin", "facebook", "github", "pub"].sample
+get '/randomlols' do
+  @name = ["linkedin", "facebook", "github", "pub"].sample
   erb(:index)
 end
 
+get '/namedlols' do
+  p params
+  @name = params[:name]
+  erb(:index)
+end
 
 
 # Sinatra::Reloader
