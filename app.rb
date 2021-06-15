@@ -18,11 +18,14 @@ get '/randomlols' do
   erb(:index)
 end
 
-get '/namedlols' do
+post '/namedlols' do
   p params
   @name = params[:name]
-  erb(:index)
+  erb :index
 end
 
+get '/formlols' do
+  erb :form
+end
 
 # Sinatra::Reloader
